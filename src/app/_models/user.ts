@@ -1,14 +1,28 @@
 export class User {
-  public id: number;
-  public username: string;
-  public password: string;
-  public firstName: string;
-  public lastName: string;
+  private id: number;
+  private username: string;
+  private password: string;
+  private firstName: string;
+  private lastName: string;
 
-  constructor() {
-    this.username = '';
-    this.password = '';
-    this.firstName = '';
-    this.lastName = '';
+  constructor(username: string, password: string) {
+    this.username = username;
+    this.password = password;
+  }
+
+  getId(): number {
+    return this.id;
+  }
+
+  getUsername(): string {
+    return this.username;
+  }
+
+  getFisrtName(): string {
+    return this.firstName;
+  }
+
+  getLastName(): string {
+    return this.lastName;
   }
 }

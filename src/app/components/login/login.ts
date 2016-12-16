@@ -16,7 +16,7 @@ export class LoginComponent {
    * @param {Router} router
    */
   constructor(private router : Router) {
-    this.user = new User();
+
   }
 
   /**
@@ -25,9 +25,9 @@ export class LoginComponent {
    * @param {string} password
    */
   login(username : string, password : string) {
-    this.user.username = username;
-    this.user.password = password;
-    if (this.user.username !== '' && this.user.password !== '') {
+    if (username !== '' && password !== '') {
+      this.user = new User(username, password);
+      // call a service to verify if the user is authorized and redirect to the home
       this.router.navigate(['/home']);
     }
   }
