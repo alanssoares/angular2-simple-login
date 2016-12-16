@@ -1,0 +1,34 @@
+<div id="login" class="container">
+	<div class="row-fluid" data-autoscroll="false">
+		<div class="panel panel-primary panel-on col-xs-5 col-xs-offset-3">
+				<div class="panel-heading">
+					<div class="row-fluid">
+						<div class="text-center"><h3><strong>CAFU</strong></h3></div>
+					</div>
+				</div>
+				<div class="panel-body">
+					<fieldset>
+						<div class="control-group">
+							<label class="control-label bold">Usuário:</label>
+							<div class="controls">
+								<input type="text" class="form-control"
+									placeholder="Usuário" [(ngModel)]="username" required
+									maxlength="8">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label bold">Senha:</label>
+							<div class="controls">
+								<input type="password" class="form-control"
+									placeholder="Senha" [(ngModel)] ="password"
+									required maxlength="8">
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="panel-footer panel-primary text-center">
+					<button type="button" class="btn btn-primary" (click)="login(username, password)">Login</button>
+				</div>
+		</div>
+	</div>
+</div>
