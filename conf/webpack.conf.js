@@ -22,13 +22,19 @@ module.exports = {
         enforce: 'pre'
       },
       {
-        test: /\.(css|scss)$/,
+        test: /\.scss$/,
+        loaders: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
+        test: /\.css$/,
         loaders: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-          'postcss-loader'
+          'style-loader?importLoaders=1',
+          'css-loader?importLoaders=1'
         ]
+      },
+      {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        loader: ['file-loader', 'url-loader?limit=100000']
       },
       {
         test: /\.ts$/,
@@ -42,10 +48,6 @@ module.exports = {
         loaders: [
           'html-loader'
         ]
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file?name=fonts/[name].[hash].[ext]?'
       }
     ]
   },
