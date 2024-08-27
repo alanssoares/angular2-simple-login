@@ -37,7 +37,7 @@
     "es6-shim": "^0.35.0",
     "karma-chrome-launcher": "^0.2.3",
     "karma-webpack": "^1.7.0",
-    "webpack": "2.1.0-beta.27",
+    "webpack": "5.94.0",
     "html-webpack-plugin": "^2.9.0",
     "style-loader": "^0.13.0",
     "css-loader": "^0.23.1",
